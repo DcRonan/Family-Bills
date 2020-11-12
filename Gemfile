@@ -28,6 +28,11 @@ gem 'jbuilder', '~> 2.7'
 # -------------------------
 gem 'rubocop', '~>0.81.0'
 gem 'devise', '~> 4.2'
+gem 'bootstrap', '~> 4.5', '>= 4.5.3'
+gem 'simple_form', '~> 5.0', '>= 5.0.3'
+gem 'jquery-rails', '~> 4.4'
+gem 'sprockets-rails', '~> 3.2', '>= 3.2.2'
+gem 'popper_js', '~> 1.14.5'
 # -------------------------
 
 # Reduces boot times through caching; required in config/boot.rb
@@ -45,6 +50,9 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'better_errors', '~> 2.9', '>= 2.9.1'
+  gem 'guard', '~> 2.16', '>= 2.16.2'
+  gem 'guard-livereload', '~> 2.5', '>= 2.5.2', require: false
 end
 
 group :test do
