@@ -27,6 +27,7 @@ gem 'jbuilder', '~> 2.7'
 
 # -------------------------
 gem 'rubocop', '~>0.81.0'
+gem 'devise', '~> 4.2'
 # -------------------------
 
 # Reduces boot times through caching; required in config/boot.rb
