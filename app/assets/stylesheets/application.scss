@@ -1,2 +1,13 @@
  @import "bootstrap";
- 
+
+ .bg-blue {
+  background-color: #3778c2;
+}
+
+.bg-green {
+  background-color: #5fb523;
+}
+
+.notification:not(:last-child) {
+  margin-bottom: 0;
+}
