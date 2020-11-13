@@ -30,7 +30,7 @@
         <ul class="nav justify-content-end">
           <% if user_signed_in? %>
             <li class="nav-item mr-2">
-              <%= link_to 'Dan', edit_user_registration_path, class: 'nav-link btn bg-green text-white' %>
+              <%= link_to current_user.name, edit_user_registration_path, class: 'nav-link btn bg-green text-white' %>
             </li>
             <li class="nav-item mr-2">
               <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-link btn bg-green text-white' %>
