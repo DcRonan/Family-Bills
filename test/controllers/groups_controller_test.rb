@@ -15,11 +15,6 @@ class GroupsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should create group" do
-    assert_difference('Group.count') do
-      post groups_url, params: { group: { icon: @group.icon, name: @group.name } }
-    end
-
     assert_redirected_to group_url(Group.last)
   end
 
@@ -31,11 +26,6 @@ class GroupsControllerTest < ActionDispatch::IntegrationTest
   test "should get edit" do
     get edit_group_url(@group)
     assert_response :success
-  end
-
-  test "should update group" do
-    patch group_url(@group), params: { group: { icon: @group.icon, name: @group.name } }
-    assert_redirected_to group_url(@group)
   end
 
   test "should destroy group" do

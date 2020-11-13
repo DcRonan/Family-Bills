@@ -17,7 +17,7 @@ class GroupsController < ApplicationController
   end
 
   def create
-    @group = Group.new(group_params)
+    @group = current_user.groups.new(group_params)
 
     respond_to do |format|
       if @group.save
@@ -57,6 +57,6 @@ class GroupsController < ApplicationController
     end
 
     def group_params
-      params.require(:group).permit(:name, :icon)
+      params.require(:group).permit(:name)
     end
 end
