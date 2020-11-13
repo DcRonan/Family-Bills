@@ -7,41 +7,45 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <body>
-    <% if flash[:notice] %>
-      <div class="bg-primary">
-        <p class="notice"> <%= notice %> </p>
+  <body class="container-fluid">
+    <div class="row">
+      <% if flash[:notice] %>
+      <div class="bg-success col-12 text-center p-3">
+        <p class="notice text-white m-auto"> <%= notice %> </p>
       </div>
     <% end %>
     <% if flash[:alert] %>
-      <div class="bg-danger">
-        <p class="alert"> <%= alert %> </p>
+      <div class="bg-danger col-12 text-center p-3">
+        <p class="alert text-white m-auto"> <%= alert %> </p>
       </div>
     <% end %>
-    <nav class="bg-blue navbar">
-      <ul class="nav">
-        <%= link_to root_path, class: "nav-item" do %>
-          <h4 class="text-white"> Home </h4>
-        <% end %>
-      </ul>
-      <ul class="nav justify-content-end">
-        <% if user_signed_in? %>
-          <li class="nav-item mr-2">
-            <%= link_to 'Dan', edit_user_registration_path, class: 'nav-link btn bg-green text-white' %>
-          </li>
-          <li class="nav-item mr-2">
-            <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-link btn bg-green text-white' %>
-          </li>
-        <% else %>
-          <li class="nav-item mr-2">
-            <%= link_to "Sign In", new_user_session_path, class: 'nav-link btn bg-green text-white' %>
-          </li>
-          <li class="nav-item mr-2">
-            <%= link_to "Sign Up", new_user_registration_path, class: 'nav-link btn bg-green text-white' %>
-          </li>
-        <% end %>
-      </ul>
-    </nav>
+    </div>
+    <div class="row">
+      <nav class="bg-blue navbar col-12">
+        <ul class="nav">
+          <%= link_to root_path, class: "nav-item" do %>
+            <h4 class="text-white"> Home </h4>
+          <% end %>
+        </ul>
+        <ul class="nav justify-content-end">
+          <% if user_signed_in? %>
+            <li class="nav-item mr-2">
+              <%= link_to 'Dan', edit_user_registration_path, class: 'nav-link btn bg-green text-white' %>
+            </li>
+            <li class="nav-item mr-2">
+              <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-link btn bg-green text-white' %>
+            </li>
+          <% else %>
+            <li class="nav-item mr-2">
+              <%= link_to "Sign In", new_user_session_path, class: 'nav-link btn bg-green text-white' %>
+            </li>
+            <li class="nav-item mr-2">
+              <%= link_to "Sign Up", new_user_registration_path, class: 'nav-link btn bg-green text-white' %>
+            </li>
+          <% end %>
+        </ul>
+      </nav>
+    </div>
     <%= yield %>
   </body>
 </html>

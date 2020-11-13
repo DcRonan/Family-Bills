@@ -1,6 +1,15 @@
- @import "bootstrap";
+@import "bootstrap";
+@import 'mixins';
 
- .bg-blue {
+body {
+  height: 100vh;
+}
+
+.sessions {
+  @include flexCenter(center, column);
+}
+
+.bg-blue {
   background-color: #3778c2;
 }
 
