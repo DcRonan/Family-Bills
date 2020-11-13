@@ -4,7 +4,7 @@ class TransactionsController < ApplicationController
 
   def index
     @transactions = Transaction.all.recent
-    @total_amount = Transaction.pluck(:amount).inject(0) { |sum, x| sum + x }
+    @total = Transaction.pluck(:amount).inject(0) { |sum, x| sum + x }
   end
 
   def show
