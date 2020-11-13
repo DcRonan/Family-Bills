@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :groups
   resources :transactions
+  resources :home
   devise_for :users
-  root 'transactions#index'
+  root 'home#index'
 end

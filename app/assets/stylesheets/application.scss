@@ -1,11 +1,12 @@
 @import "bootstrap";
-@import 'mixins';
+@import "mixins";
 
 body {
   height: 100vh;
 }
 
-.sessions {
+.sessions,
+#main-login {
   @include flexCenter(center, column);
 }
 
