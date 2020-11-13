@@ -11,6 +11,17 @@
     </div>
   <% end %>
 
+  <% unless @groups.nil? || @groups.empty? %>
+        <div>
+          <% @groups.each do |group| %>
+            <div>
+              <%= form.label :group_id, group.name %>
+              <%= form.check_box(:group_id, {multiple: true}, group.id) %>
+            </div>
+          <% end %>
+        </div>
+    <% end %>
+
   <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>

@@ -12,6 +12,7 @@ class TransactionsController < ApplicationController
 
   def new
     @transaction = Transaction.new
+    @groups = Group.all
   end
 
   def edit
