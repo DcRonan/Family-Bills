@@ -17,7 +17,7 @@ class TransactionsController < ApplicationController
   end
 
   def create
-    @transaction = Transaction.new(transaction_params)
+    @transaction = current_user.transactions.new(transaction_params)
 
     respond_to do |format|
       if @transaction.save
