@@ -3,7 +3,7 @@ class TransactionsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @transactions = Transaction.all
+    @transactions = Transaction.all.recent
   end
 
   def show
