@@ -1,6 +1,6 @@
 class Transaction < ApplicationRecord
   belongs_to :user
-  belongs_to :group
+  has_many :groups
   validates :name, :amount, presence: :true
 
   scope :recent, -> { order(created_at: :desc) }

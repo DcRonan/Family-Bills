@@ -5,7 +5,7 @@ class User < ApplicationRecord
   has_many :transactions
   has_many :groups
 
-  def external_transactions(tran)
-      tran.select { |t| t.group_id == id}
+  def external_transaction(tran)
+      tran.select { |t| t.group_id == nil } 
   end
 end

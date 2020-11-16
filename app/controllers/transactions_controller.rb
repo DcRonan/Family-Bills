@@ -54,7 +54,7 @@ class TransactionsController < ApplicationController
 
   def external_transactions
     @all_transactions = current_user.transactions.all.recent
-    @e_transactions = current_user.external_transactions(@all_transactions)
+    @e_transactions = current_user.external_transaction(@all_transactions)
   end
 
   private
