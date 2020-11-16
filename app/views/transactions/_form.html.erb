@@ -12,7 +12,7 @@
 
   <div class="field">
     <%= form.label :group %>
-    <%= form.collection_select(:group_id, @groups, :id, :name, {}) %>
+    <%= form.collection_select(:group_id, @groups, :id, :name, prompt: true) %>
   </div>
 
   <div class="field">

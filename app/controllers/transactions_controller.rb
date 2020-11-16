@@ -3,7 +3,7 @@ class TransactionsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
   def index
-    @transactions = Transaction.all.recent
+    @transactions = current_user.transactions.all.recent
     @total = Transaction.pluck(:amount).inject(0) { |sum, x| sum + x }
   end
 
@@ -50,6 +50,11 @@ class TransactionsController < ApplicationController
       format.html { redirect_to transactions_url, notice: 'Transaction was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def external_transactions
+    @all_transactions = current_user.transactions.all.recent
+    @e_transactions = current_user.external_transactions(@all_transactions)
   end
 
   private
