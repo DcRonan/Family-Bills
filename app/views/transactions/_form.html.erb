@@ -2,7 +2,6 @@
   <% if transaction.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(transaction.errors.count, "error") %> prohibited this transaction from being saved:</h2>
-
       <ul>
         <% transaction.errors.full_messages.each do |message| %>
           <li><%= message %></li>
@@ -11,16 +10,10 @@
     </div>
   <% end %>
 
-  <% unless @groups.nil? || @groups.empty? %>
-        <div>
-          <% @groups.each do |group| %>
-            <div>
-              <%= form.label :group_id, group.name %>
-              <%= form.check_box(:group_id, {multiple: true}, group.id) %>
-            </div>
-          <% end %>
-        </div>
-    <% end %>
+  <div class="field">
+    <%= form.label :group %>
+    <%= form.collection_select(:group_id, @groups, :id, :name, {}) %>
+  </div>
 
   <div class="field">
     <%= form.label :name %>
@@ -31,7 +24,7 @@
     <%= form.label :amount %>
     <%= form.number_field :amount %>
   </div>
-
+  
   <div class="actions">
     <%= form.submit %>
   </div>
