@@ -11,8 +11,6 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
-    @group.transactions.build
-    @group.user_id = current_user.id
   end
 
   def edit
