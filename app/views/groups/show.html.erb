@@ -5,5 +5,10 @@
   <%= @group.name %>
 </p>
 
+<% @transactions.each do |tran| %>
+  <%= tran.name %>
+  <%= tran.amount %>
+<% end %>
+
 <%= link_to 'Edit', edit_group_path(@group) %> |
 <%= link_to 'Back', groups_path %>

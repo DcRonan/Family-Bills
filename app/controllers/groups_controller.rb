@@ -7,6 +7,8 @@ class GroupsController < ApplicationController
   end
 
   def show
+    @group = Group.find(params[:id])
+    @transactions = @group.transactions.includes([:user])
   end
 
   def new
