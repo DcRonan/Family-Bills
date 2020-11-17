@@ -13,8 +13,6 @@ class GroupsControllerTest < ActionDispatch::IntegrationTest
   test "should get new" do
     get new_group_url
     assert_response :success
-  end
-
     assert_redirected_to group_url(Group.last)
   end
 

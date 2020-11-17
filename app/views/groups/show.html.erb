@@ -8,6 +8,7 @@
 <% @transactions.each do |tran| %>
   <%= tran.name %>
   <%= tran.amount %>
+  <%= tran.user.name %>
 <% end %>
 
 <%= link_to 'Edit', edit_group_path(@group) %> |
