@@ -1,22 +1,20 @@
 class TransactionsController < ApplicationController
-  before_action :set_transaction, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_transaction, only: %i[show edit update destroy]
+  before_action :authenticate_user!, except: %i[index show]
 
   def index
     @transactions = current_user.transactions.all.recent
     @total = Transaction.pluck(:amount).inject(0) { |sum, x| sum + x }
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @transaction = Transaction.new
     @groups = Group.all
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     @transaction = current_user.transactions.new(transaction_params)
@@ -58,12 +56,12 @@ class TransactionsController < ApplicationController
   end
 
   private
-  
-    def set_transaction
-      @transaction = Transaction.find(params[:id])
-    end
 
-    def transaction_params
-      params.require(:transaction).permit(:name, :amount, :group_id)
-    end
+  def set_transaction
+    @transaction = Transaction.find(params[:id])
+  end
+
+  def transaction_params
+    params.require(:transaction).permit(:name, :amount, :group_id)
+  end
 end

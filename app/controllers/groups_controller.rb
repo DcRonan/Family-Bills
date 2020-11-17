@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
-  before_action :set_group, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_group, only: %i[show edit update destroy]
+  before_action :authenticate_user!, except: %i[index show]
 
   def index
     @groups = Group.all
@@ -9,16 +9,13 @@ class GroupsController < ApplicationController
   def show
     @group = Group.find(params[:id])
     @transactions = @group.transactions.includes([:user])
-    # @user.avatar.attach(params[:avatar])
-    # @user.avatar.attach(io: File.open('app/assets/images/placeholder.png'), filename: 'placeholder', content_type: 'image/png')
   end
 
   def new
     @group = Group.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     @group = current_user.groups.new(group_params)
@@ -55,12 +52,12 @@ class GroupsController < ApplicationController
   end
 
   private
-  
-    def set_group
-      @group = Group.find(params[:id])
-    end
 
-    def group_params
-      params.require(:group).permit(:avatar, :name)
-    end
+  def set_group
+    @group = Group.find(params[:id])
+  end
+
+  def group_params
+    params.require(:group).permit(:avatar, :name)
+  end
 end
