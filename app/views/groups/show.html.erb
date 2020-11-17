@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @group.name %>
+  <% if @group.avatar.attached? %>
+    <%= image_tag @group.avatar %>
+  <% end %>
+</p>
+
+<% @transactions.each do |tran| %>
+  <%= tran.name %>
+  <%= tran.amount %>
+  <%= tran.user.name %>
+<% end %>
+
+<%= link_to 'Edit', edit_group_path(@group) %> |
+<%= link_to 'Back', groups_path %>

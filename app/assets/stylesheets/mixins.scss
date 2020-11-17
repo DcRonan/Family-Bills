@@ -1,0 +1,7 @@
+// FLEX DIRECTION
+@mixin flexCenter($justify, $direction) {
+  display: flex;
+  justify-content: $justify;
+  flex-direction: $direction;
+  margin: auto;
+}

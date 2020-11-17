@@ -1,0 +1,33 @@
+<div id="main-page" class="row h-100">
+  <ul class="nav sessions col-10 text-center">
+    <% if user_signed_in? %>
+    <% if current_user.avatar.attached? %>
+          <%= image_tag current_user.avatar %>
+      <% end %>
+      <li class="nav-item">
+          <%= current_user.name %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Transactions', transactions_path, class: 'nav-link' %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'External Transactions', external_transactions_path, class: 'nav-link' %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Groups', groups_path, class: 'nav-link' %>
+      </li>
+      <li class="nav-item">
+        <%= link_to 'Edit Account', edit_user_registration_path, class: 'nav-link' %>
+      </li>
+    </ul>  
+    <% else %>
+      <ul id="main-login" class="nav col-10 text-center fixed-bottom mb-3">
+        <li class="nav-item">
+        <%= link_to "Sign In", new_user_session_path, class: 'nav-link btn bg-green text-white w-100 p-3' %>
+      </li>
+      <li class="nav-item mt-2">
+        <%= link_to "Sign Up", new_user_registration_path, class: 'nav-link btn bg-green text-white w-100 p-3' %>
+      </li>
+      </ul>
+    <% end %>
+</div>

@@ -1,0 +1,29 @@
+@import "bootstrap";
+@import "mixins";
+
+body {
+  height: 100vh;
+}
+
+.sessions,
+#main-login {
+  @include flexCenter(center, column);
+}
+
+.bg-blue {
+  background-color: #3778c2;
+}
+
+.bg-green {
+  background-color: #5fb523;
+}
+
+.notification:not(:last-child) {
+  margin-bottom: 0;
+}
+
+img {
+  width: 60px;
+  height: 60px;
+  margin: auto;
+}
