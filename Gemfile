@@ -26,7 +26,7 @@ gem 'jbuilder', '~> 2.7'
 # gem 'image_processing', '~> 1.2'
 
 # -------------------------
-gem 'aws-sdk-s3', require: false
+# gem 'aws-sdk-s3', require: false
 gem 'bootstrap', '~> 4.5', '>= 4.5.3'
 gem 'devise', '~> 4.2'
 gem 'jquery-rails', '~> 4.4'
