@@ -12,7 +12,7 @@
 
   <div class="field">
     <%= form.label :group %>
-    <%= form.collection_select(:group_id, @groups, :id, :name, prompt: true) %>
+    <%= select("group", "group", Group.all.collect {|p| [ p.name, p.id ] }, { include_blank: true }) %>
   </div>
 
   <div class="field">
