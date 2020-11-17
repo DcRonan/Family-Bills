@@ -6,6 +6,6 @@ class User < ApplicationRecord
   has_many :groups
 
   def external_transaction(tran)
-      tran.select { |t| t.group_id == nil  } || []
+      tran.select { |t| t.group_id == nil  }
   end
 end
