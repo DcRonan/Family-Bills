@@ -33,6 +33,7 @@ gem 'simple_form', '~> 5.0', '>= 5.0.3'
 gem 'jquery-rails', '~> 4.4'
 gem 'sprockets-rails', '~> 3.2', '>= 3.2.2'
 gem 'popper_js', '~> 1.14.5'
+gem 'aws-sdk-s3', require: false
 # -------------------------
 
 # Reduces boot times through caching; required in config/boot.rb
