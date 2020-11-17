@@ -1,6 +1,9 @@
 <div id="main-page" class="row h-100">
   <ul class="nav sessions col-10 text-center">
     <% if user_signed_in? %>
+    <% if current_user.avatar.attached? %>
+          <%= image_tag current_user.avatar %>
+      <% end %>
       <li class="nav-item">
           <%= current_user.name %>
       </li>

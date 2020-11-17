@@ -3,6 +3,9 @@
 <p>
   <strong>Name:</strong>
   <%= @group.name %>
+  <% if @group.avatar.attached? %>
+    <%= image_tag @group.avatar %>
+  <% end %>
 </p>
 
 <% @transactions.each do |tran| %>

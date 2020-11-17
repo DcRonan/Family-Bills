@@ -9,6 +9,8 @@ class GroupsController < ApplicationController
   def show
     @group = Group.find(params[:id])
     @transactions = @group.transactions.includes([:user])
+    # @user.avatar.attach(params[:avatar])
+    # @user.avatar.attach(io: File.open('app/assets/images/placeholder.png'), filename: 'placeholder', content_type: 'image/png')
   end
 
   def new
@@ -59,6 +61,6 @@ class GroupsController < ApplicationController
     end
 
     def group_params
-      params.require(:group).permit(:name)
+      params.require(:group).permit(:avatar, :name)
     end
 end

@@ -16,6 +16,9 @@
         <%= f.input :password_confirmation, required: true, input_html: { class: "form-control" }, wrapper: false, label_html: { class: "label" } %>
       </div>
       <div class="form-group">
+        <%= f.file_field :avatar, required: true %>
+      </div>
+      <div class="form-group">
         <%= f.button :submit, "Sign up", class:"btn btn-primary" %>
       </div>
     <% end %>
