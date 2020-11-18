@@ -22,8 +22,23 @@ body {
   margin-bottom: 0;
 }
 
-img {
-  width: 60px;
-  height: 60px;
+#main-page {
+  background: linear-gradient(17deg, rgba(51,105,167,0.8229317851959361) 0%, rgba(55,120,194,1) 65%);
+  height: 93vh;
+}
+
+#main-page img {
+  width: 80px;
+  height: 80px;
   margin: auto;
 }
+
+.group-img img {
+  height: 60px;
+  width: 60px;
+}
+
+.nav img {
+  height: 3em;
+  width: 3em;
+} 

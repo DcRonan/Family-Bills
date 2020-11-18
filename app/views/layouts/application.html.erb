@@ -25,17 +25,32 @@
       <nav class="bg-blue navbar col-12">
         <ul class="nav">
           <%= link_to home_index_path, class: "nav-item" do %>
-            <svg width="2em" height="2em" viewBox="0 0 16 16" class="bi bi-house-fill" fill="white" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M8 3.293l6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
-              <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="2em" height="2em" viewBox="0 0 124 124" fill="#fff" style="enable-background:new 0 0 124 124;" xml:space="preserve">
+              <g>
+                <path d="M112,6H12C5.4,6,0,11.4,0,18s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,6,112,6z"/>
+                <path d="M112,50H12C5.4,50,0,55.4,0,62c0,6.6,5.4,12,12,12h100c6.6,0,12-5.4,12-12C124,55.4,118.6,50,112,50z"/>
+                <path d="M112,94H12c-6.6,0-12,5.4-12,12s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,94,112,94z"/>
+              </g>
             </svg>
           <% end %>
         </ul>
-        <ul class="nav justify-content-end">
-          <% if user_signed_in? %>
-            <li class="nav-item mr-2">
-              <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-link btn bg-green text-white' %>
-            </li>
+        <ul class="nav text-white justify-content-center">
+          <% if current_page?(transactions_path) %>
+          <h3 class="font-weight-light mt-2"> ALL </h3>
+          <% elsif current_page?(external_transactions_path) %>
+            <h3 class="font-weight-light mt-2"> EXTERNAL </h3>
+          <% elsif current_page?(groups_path) %>  
+            <h3 class="font-weight-light mt-2"> GROUPS </h3>
+          <% end %>
+        </ul>
+        <ul class="nav nav-img">
+          <% if current_user.avatar.attached? %>
+            <% if current_page?(home_index_path) %>
+            <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-link btn bg-green text-white' %>
+            <% else %>
+              <%= image_tag current_user.avatar, class: 'rounded-circle' %>
+            <% end %>
           <% end %>
         </ul>
       </nav>

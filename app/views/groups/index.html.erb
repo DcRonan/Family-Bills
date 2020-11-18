@@ -10,11 +10,12 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="group-img">
     <% @groups.each do |group| %>
       <tr>
         <td><%= group.name %></td>
         <td><b><%= group.created_at %></td></b>
+        <td><%= image_tag group.avatar %></td>
         <td><%= link_to 'Show', group %></td>
         <td><%= link_to 'Edit', edit_group_path(group) %></td>
         <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
