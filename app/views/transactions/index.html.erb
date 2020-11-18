@@ -1,10 +1,8 @@
-
-
 <h1>Transactions</h1>
 
-    <h6>
-      Total: <%= @total %>
-    </h6>
+<h6>
+  Total: <%= @total %>
+</h6>
 
 <table>
   <thead>
@@ -20,9 +18,8 @@
       <tr>
         <td><%= transaction.name %></td>
         <td><%= transaction.amount %></td>
+        <img src=<%=transaction.avatar%>%>
         <td><%= transaction.created_at %></td>
-        <td><%= link_to 'Show', transaction %></td>
-        <td><%= link_to 'Edit', edit_transaction_path(transaction) %></td>
         <td><%= link_to 'Destroy', transaction, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -30,5 +27,4 @@
 </table>
 
 <br>
-
 <%= link_to 'New Transaction', new_transaction_path %>
