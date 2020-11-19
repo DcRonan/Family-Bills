@@ -1,30 +1,47 @@
-<div class="row">
-  <div class="d-flex justify-content-between bg-green col-12 p-3">
+<div class="row trans-index">
+  <div class="d-flex justify-content-between total-box col-12 p-3 mb-3">
     <div>
       Total
     </div>
     <div>
-      <%= @total %> hours
+      <b class="text-green"> <%= @total %> hours </b>
     </div>
   </div>
-
-  
-     <% @transactions.each do |transaction| %>
-     <div class="d-flex flex-column p-2 justify-content-between m-auto col-11">
-      <div class="card w-100 m-auto">
-          <div class="card-body">
-            <%= transaction.name %>
-          <%= transaction.amount %>
-          <%= transaction.created_at %>
-          <%= link_to 'Show', transaction %>
-          <%= link_to 'Destroy', transaction, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% @transactions.each do |transaction| %>
+    <div class="d-flex flex-column p-2 justify-content-between m-auto col-11">
+      <div class="card w-100">
+        <div class="card-body px-0 d-flex">
+          <div class="d-flex justify-content-center align-items-center col-3">
+            <%= image_tag 'stopwatch.png', alt: 'stopwatch', class: 'trans-img' %>
           </div>
+          <div class="d-flex flex-column justify-content-between col-9">
+            <div class="d-flex justify-content-between">
+              <div class="text-secondary font-weight-light mb-2">
+                <%= transaction.name %>
+              </div>
+              <div>
+                <b> <%= transaction.amount %> </b>
+              </div>
+            </div>
+            <div class="text-secondary font-weight-light d-flex justify-content-between mt-2">
+              <div>
+                <%= transaction.created_at %>
+              </div>
+              <div>
+                <%= link_to transaction do %>
+                  <i class="fas fa-info-circle mr-1 trans-icons text-blue"></i>
+                <% end %>
+                <%= link_to transaction, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                  <i class="fas fa-trash-alt ml-1 trans-icons text-blue"></i>
+                <% end %>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-     </div>
-    <% end %>
-
-
+    </div>
+  <% end %>
 </div>
 <div class="fixed-bottom text-center">
-  <%= link_to 'New Transaction', new_transaction_path %>
+  <%= button_to 'Add New', new_transaction_path, method: :get, class: 'btn col-11 bg-green p-3 mb-2 text-white' %>
 </div>

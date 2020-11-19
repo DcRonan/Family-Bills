@@ -1,5 +1,6 @@
 @import "bootstrap";
 @import "mixins";
+@import 'transactions';
 
 body {
   height: 100vh;
@@ -14,8 +15,20 @@ body {
   background-color: #3778c2;
 }
 
+.text-blue {
+  color: #3778c2;
+}
+
+.trans-icons {
+  font-size: 18px;
+}
+
 .bg-green {
   background-color: #5fb523;
+}
+
+.text-green {
+  color: #5fb523;
 }
 
 .notification:not(:last-child) {
@@ -24,7 +37,7 @@ body {
 
 #main-page {
   background: linear-gradient(17deg, rgba(51,105,167,0.8229317851959361) 0%, rgba(55,120,194,1) 65%);
-  height: 94vh;
+  height: 100vh;
 }
 
 #main-page img {
@@ -44,12 +57,19 @@ body {
 }
 
 .card {
-  padding: 1rem;
-  margin: 1rem;
-  background: #fff;
   box-shadow:
     3px 3px rgba(200, 200, 200, 0.2),
     3px -3px rgba(200, 200, 200, 0.2),
     -3px -3px rgba(200, 200, 200, 0.2),
     -3px 3px rgba(200, 200, 200, 0.2);
+}
+
+.total-box {
+  box-shadow:
+    5px 5px rgba(200, 200, 200, 0.2),
+
+}
+
+.justify-content-evenly {
+  justify-content: space-evenly;
 }
