@@ -9,7 +9,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://kit.fontawesome.com/867f1dd431.js" crossorigin="anonymous"></script>
   </head>
-  <body class="container-fluid <%= 'blue-background' if current_page?(groups_path) || current_page?(home_index_path) %>">
+  <body class="container-fluid <%= 'blue-background' if current_page?(groups_path) || current_page?(home_index_path) || current_page?(root_path) && user_signed_in? %>">
     <div class="row">
       <% if flash[:notice] %>
         <div class="bg-success col-12 text-center p-2">
@@ -23,7 +23,7 @@
       <% end %>
     </div>
     <div class="row">
-      <nav class="bg-blue navbar col-12 main-navbar">
+      <nav class="bg-blue navbar col-12 main-navbar <%= 'd-none' if !user_signed_in? %>">
         <ul class="nav">
           <%= link_to home_index_path, class: "nav-item" do %>
             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
