@@ -6,11 +6,6 @@ body {
   height: 100vh;
 }
 
-.sessions,
-#main-login {
-  @include flexCenter(center, column);
-}
-
 .bg-blue {
   background-color: #3778c2;
 }
@@ -72,4 +67,15 @@ body {
 
 .justify-content-evenly {
   justify-content: space-evenly;
+}
+
+.sessions {
+  @include flexCenter(center, column);
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
 }
