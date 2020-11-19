@@ -26,13 +26,22 @@ body {
   color: #5fb523;
 }
 
+.text-dark {
+  color: #434b54;
+}
+
 .notification:not(:last-child) {
   margin-bottom: 0;
 }
 
-#main-page {
+.main-navbar {
+  z-index: 800;
+}
+
+#main-page,
+.groups-index {
   background: linear-gradient(17deg, rgba(51,105,167,0.8229317851959361) 0%, rgba(55,120,194,1) 65%);
-  height: 100vh;
+  height: 100%;
 }
 
 #main-page img {
@@ -62,7 +71,6 @@ body {
 .total-box {
   box-shadow:
     5px 5px rgba(200, 200, 200, 0.2),
-
 }
 
 .justify-content-evenly {

@@ -1,16 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-      <div class="sessions ">
-      <% @groups.each do |group| %>
-        <%= group.name %>
-        <b><%= group.created_at %></b>
-        <div class="group-img">
-          <%= image_tag group.avatar %>
-        </div>
-    <% end %>
-</div>
-
-
+  <div class="groups-index sessions justify-content-evenly container-fluid text-white font-weight-light ">
+    <% @groups.each do |group| %>
+    <div class="d-flex">
+      <div class="group-img mr-2 mb-3">
+        <%= image_tag group.avatar %>
+      </div>
+      <div class="d-flex justify-content-between w-100 border-silver border-bottom mb-3">
+        <div class="d-flex flex-column justify-content-center">
+        <b> <%= group.name %> </b>
+       <p class="text-dark"><%= group.created_at %></p>
+      </div>
+      <div class="d-flex align-items-center mb-3 mr-2">
+        <%= link_to group do %>
+          <i class="fas fa-sign-in-alt text-green fa-2x"></i>
+        <% end %>
+      </div>
+      </div>
+    </div>
+  <% end %>
+  </div>
 
 <div class="fixed-bottom text-center">
   <%= button_to 'Add New', new_group_path, method: :get, class: 'btn col-11 bg-green p-3 mb-2 text-white' %>
