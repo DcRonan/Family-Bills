@@ -9,7 +9,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://kit.fontawesome.com/867f1dd431.js" crossorigin="anonymous"></script>
   </head>
-  <body class="container-fluid">
+  <body class="container-fluid <%= 'blue-background' if current_page?(groups_path) || current_page?(home_index_path) %>">
     <div class="row">
       <% if flash[:notice] %>
         <div class="bg-success col-12 text-center p-2">
