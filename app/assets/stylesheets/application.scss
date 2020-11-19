@@ -1,9 +1,14 @@
 @import "bootstrap";
 @import "mixins";
 @import 'transactions';
+@import 'groups';
 
 body {
   height: 100vh;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 .bg-blue {

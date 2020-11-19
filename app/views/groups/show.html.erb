@@ -1,20 +1,50 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @group.name %>
-  <div class="group-img">
+ <div class="row group-show">
+  <div class="group-img d-flex justify-content-center align-items-center total-box col-12 pb-3 mb-3">
     <% if @group.avatar.attached? %>
-    <%= image_tag @group.avatar %>
+    <%= image_tag @group.avatar, class: 'mr-2' %>
   <% end %>
+    <h3 class="text-dark"> <%= @group.name %> </h3>
   </div>
-</p>
+  <% @transactions.each do |transaction| %>
+    <div class="d-flex flex-column p-2 justify-content-between m-auto col-11">
+      <%= link_to transaction do %>
+      <div class="card w-100">
+        <div class="card-body px-0 d-flex">
+          <div class="d-flex justify-content-center align-items-center col-3">
+            <%= image_tag 'stopwatch.png', alt: 'stopwatch', class: 'trans-img' %>
+          </div>
+          <div class="d-flex flex-column justify-content-between col-9">
+            <div class="d-flex justify-content-between">
+              <div class="text-secondary font-weight-light mb-2">
+                <%= transaction.name %>
+              </div>
+              <div>
+                <b> <%= transaction.amount %> </b>
+              </div>
+            </div>
+            <div class="text-secondary font-weight-light d-flex justify-content-between mt-2">
+              <div>
+                <%= transaction.created_at %>
+              </div>
+              <div>
+                <b class="text-green"> <%= transaction.user.name %> </b>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  <% end %>
+</div>
 
-<% @transactions.each do |tran| %>
-  <%= tran.name %>
-  <%= tran.amount %>
-  <%= tran.user.name %>
-<% end %>
-
-<%= link_to 'Edit', edit_group_path(@group) %> |
-<%= link_to 'Back', groups_path %>
+<div class="fixed-bottom text-center d-flex row m-2">
+  <div class="col-6">
+    <%= button_to 'Edit', edit_group_path(@group), method: :get, class: 'btn bg-green p-2 text-white w-100' %>
+  </div>
+  <div class="col-6">
+    <%= button_to 'Back', groups_path, method: :get, class: 'btn bg-danger p-2 w-100 text-white' %>
+  </div>
+</div>
