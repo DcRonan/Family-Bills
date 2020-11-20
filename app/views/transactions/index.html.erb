@@ -4,7 +4,7 @@
       Total
     </div>
     <div class="total-num text-green bold-font">
-       <b> <%= @total %> hours </b>
+       <b>£<%= @total %> </b>
     </div>
   </div>
   <% @transactions.each do |transaction| %>
@@ -20,7 +20,7 @@
                 <%= transaction.name %>
               </div>
               <div>
-                <b> <%= transaction.amount %> </b>
+                <b>£<%= transaction.amount %> </b>
               </div>
             </div>
             <div class="text-secondary font-weight-light d-flex justify-content-between mt-2">
