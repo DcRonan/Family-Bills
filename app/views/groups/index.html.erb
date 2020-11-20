@@ -4,6 +4,8 @@
       <div class="group-img mr-2 mb-3">
         <% if group.avatar.attached? %>
           <%= image_tag group.avatar %>
+        <% elsif !group.avatar.attached? %>  
+          <%= image_tag 'folder.png', alt: 'folders icon' %>
         <% end %>
       </div>
       <div class="d-flex justify-content-between w-100 border-silver border-bottom mb-3">
