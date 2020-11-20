@@ -36,7 +36,7 @@
             </svg>
           <% end %>
         </ul>
-        <ul class="nav text-white justify-content-center">
+        <ul class="nav text-white justify-content-center bold-font">
           <% if current_page?(transactions_path) %>
             <h3 class="font-weight-light mt-2"> ALL </h3>
           <% elsif current_page?(external_transactions_path) %>
@@ -51,7 +51,7 @@
             <h3 class="font-weight-light mt-2"> NEW GROUP </h3>   
           <% end %>
         </ul>
-        <ul class="nav nav-img">
+        <ul class="nav nav-img light-font">
           <% if user_signed_in? %>
             <% if current_user.avatar.attached? %>
               <% if current_page?(home_index_path) %>
