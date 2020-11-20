@@ -7,7 +7,9 @@ class TransactionsController < ApplicationController
     @total = Transaction.pluck(:amount).inject(0) { |sum, x| sum + x }
   end
 
-  def show; end
+  def show
+    Transaction.find(params[:id])
+  end
 
   def new
     @transaction = Transaction.new
