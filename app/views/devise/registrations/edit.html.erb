@@ -1,4 +1,4 @@
-<div class="row mt-4">
+<div class="row mt-4 light-font text-dark">
   <div class="col-12 m-auto">
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= f.error_notification %>
@@ -32,7 +32,7 @@
   </div>
 </div>
 
-<div class="fixed-bottom text-center d-flex row m-2">
+<div class="fixed-bottom text-center d-flex row m-2 light-font">
   <div class="col-6">
     <%= button_to 'Back', home_index_path, method: :get, class: 'btn bg-green p-2 w-100 text-white' %>
   </div>

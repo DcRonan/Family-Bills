@@ -1,11 +1,11 @@
- <div class="row group-show">
+ <div class="row group-show light-font">
   <div class="group-img d-flex justify-content-center align-items-center total-box p-2 col-12 mb-3">
     <% if @group.avatar.attached? %>
     <%= image_tag @group.avatar, class: 'mr-2' %>
     <% elsif !@group.avatar.attached? %>  
       <%= image_tag 'folder.png', alt: 'folders icon', class: 'mr-2' %>
   <% end %>
-    <h3 class="text-dark"> <%= @group.name %> </h3>
+    <h3 class="text-dark bold-font"> <%= @group.name %> </h3>
   </div>
   <% @transactions.each do |transaction| %>
     <div class="d-flex flex-column p-2 justify-content-between m-auto col-11">
@@ -40,7 +40,7 @@
   <% end %>
 </div>
 
-<div class="fixed-bottom text-center d-flex row m-2">
+<div class="fixed-bottom text-center d-flex row m-2 light-font">
   <div class="col-6">
     <%= button_to 'Edit', edit_group_path(@group), method: :get, class: 'btn bg-green p-2 text-white w-100' %>
   </div>

@@ -1,4 +1,4 @@
-<div class="text-white font-weight-light mt-3 group-index">
+<div class="text-white light-font mt-3 group-index">
   <% @groups.each do |group| %>
     <div class="d-flex">
       <div class="group-img mr-2 mb-3">
@@ -22,6 +22,6 @@
     </div>
   <% end %>
 </div>
-<div class="fixed-bottom text-center">
+<div class="fixed-bottom text-center light-font">
   <%= button_to 'Add New', new_group_path, method: :get, class: 'btn col-11 bg-green p-3 mb-2 text-white' %>
 </div>

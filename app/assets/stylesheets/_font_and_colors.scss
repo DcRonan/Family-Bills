@@ -1,25 +1,23 @@
 @font-face {
-  font-family: ProximaNova;
-  src: url('../fonts/Proxima-Nova-Bold.otf') format('opentype');
-  font-weight: bold;
+  font-family: "proxima_novalight";
+  src: url("proxima_nova_light-webfont.woff2") format("woff2"),
+    url("proxima_nova_light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-  font-family: ProximaNova;
-  src: 
-    local('ProximaNova'),
-    url('../fonts/Proxima-Nova-Light.otf')
-    format('opentype');
-  font-style: lighter;  
-}
-
-.light-font {
-  font-family: ProximaNova, 'sans-serif';
-  font-weight: lighter;
+  font-family: "proxima_novabold";
+  src: url("proxima_nova_bold-webfont.woff2") format("woff2"),
+    url("proxima_nova_bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 .bold-font {
-  font-family: ProximaNova, 'sans-serif';
-  font-weight: lighter;
+  font-family: "proxima_novabold", Arial, sans-serif;
 }
 
+.light-font {
+  font-family: "proxima_novalight", Arial, sans-serif;
+}
