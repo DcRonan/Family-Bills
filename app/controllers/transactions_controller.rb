@@ -11,7 +11,7 @@ class TransactionsController < ApplicationController
 
   def new
     @transaction = Transaction.new
-    @groups = Group.all
+    @groups = Group.all.collect
   end
 
   def edit; end
@@ -64,6 +64,6 @@ class TransactionsController < ApplicationController
   end
 
   def transaction_params
-    params.require(:transaction).permit(:name, :amount, :group_id)
+    params.require(:transaction).permit(:name, :amount, :desc, :group_id)
   end
 end
