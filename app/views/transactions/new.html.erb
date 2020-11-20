@@ -1,3 +1,7 @@
 <%= render 'form', transaction: @transaction %>
 
-<%= link_to 'Back', transactions_path %>
+<div class="fixed-bottom text-center d-flex row m-2">
+  <div class="col-12">
+    <%= button_to 'Back', transactions_path, method: :get, class: 'btn bg-danger p-2 w-100 text-white' %>
+  </div>
+</div>
