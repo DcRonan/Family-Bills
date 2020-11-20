@@ -23,7 +23,7 @@
         <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true, input_html: { class: "form-control"}, wrapper: false, label: false, placeholder: 'current password' %>
       </div>
       <div class="form-group">
-        <%= f.file_field :avatar, required: false, class: 'p-1' %>
+        <%= f.file_field :avatar, required: false %>
       </div>
       <div class="form-group">
         <%= f.button :submit, "Confirm", class:"btn bg-blue text-white" %>

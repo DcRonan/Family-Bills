@@ -1,23 +1,21 @@
-
-  <div class="row h-100">
-    <div class="col-10 sessions text-center">
-      <h2 class="text-dark mb-3">Sign In</h2>
-      <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-        <%= f.error_notification %>
-        <div class="form-group">
-            <%= f.input :email, required: true, input_html: { class:"form-control" }, wrapper: false, label: false, placeholder: 'example@mail.com', autofocus: true %>
-        </div>
-        <div class="form-group">
-            <%= f.input :password, required: true, input_html: { class:"form-control" }, wrapper: false, label: false, placeholder: '********', hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
-        </div>
-        <div class="form-group">
-            <%= f.button :submit, "Sign In", class:"btn bg-blue text-white" %>
-        </div>
-      <% end %>
-    </div>
+<div class="row h-100">
+  <div class="col-10 sessions text-center">
+    <h2 class="text-dark mb-3">Sign In</h2>
+    <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <%= f.error_notification %>
+      <div class="form-group">
+        <%= f.input :email, required: true, input_html: { class:"form-control" }, wrapper: false, label: false, placeholder: 'example@mail.com', autofocus: true %>
+      </div>
+      <div class="form-group">
+        <%= f.input :password, required: true, input_html: { class:"form-control" }, wrapper: false, label: false, placeholder: '********', hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
+      </div>
+      <div class="form-group">
+        <%= f.button :submit, "Sign In", class:"btn bg-blue text-white w-100" %>
+      </div>
+    <% end %>
   </div>
-
-  <div class="fixed-bottom text-center d-flex row m-2">
+</div>
+<div class="fixed-bottom text-center d-flex row m-2">
   <div class="col-12">
     <%= button_to 'Sign Up', new_user_registration_path, method: :get, class: 'btn bg-danger p-2 w-100 text-white' %>
   </div>
