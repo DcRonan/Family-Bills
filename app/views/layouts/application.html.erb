@@ -24,7 +24,7 @@
     </div>
     <div class="row">
       <nav class="bg-blue navbar col-12 main-navbar <%= 'd-none' if !user_signed_in? %>">
-        <ul class="nav">
+        <ul class="nav <%= 'd-none' if current_page?(home_index_path) %>">
           <%= link_to home_index_path, class: "nav-item" do %>
             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="2em" height="2em" viewBox="0 0 124 124" fill="#fff" style="enable-background:new 0 0 124 124;" xml:space="preserve">

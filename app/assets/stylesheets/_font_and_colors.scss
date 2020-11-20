@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
 @font-face {
   font-family: "proxima_novalight";
   src: url("proxima_nova_light-webfont.woff2") format("woff2"),
@@ -20,4 +22,8 @@
 
 .light-font {
   font-family: "proxima_novalight", Arial, sans-serif;
+}
+
+.home-title {
+  font-family: 'Dancing Script', cursive;
 }
