@@ -8,10 +8,10 @@
         <%= current_user.name %>
       </li>
       <li class="nav-item mt-3">
-        <%= link_to 'Transactions', transactions_path, class: 'nav-link text-white' %>
+        <%= link_to 'Bills', transactions_path, class: 'nav-link text-white' %>
       </li>
       <li class="nav-item">
-        <%= link_to 'External Transactions', external_transactions_path, class: 'nav-link text-white' %>
+        <%= link_to 'External Bills', external_transactions_path, class: 'nav-link text-white' %>
       </li>
       <li class="nav-item">
         <%= link_to 'Groups', groups_path, class: 'nav-link text-white' %>
@@ -32,7 +32,7 @@
       <%= link_to "Sign In", new_user_session_path, class: 'nav-link btn bg-green text-white w-100 p-3' %>
     </li>
     <li class="nav-item mt-2 mb-2 col-12">
-      <%= link_to "Sign Up", new_user_registration_path, class: 'nav-link btn bg-green text-white w-100 p-3' %>
+      <%= link_to "Sign Up", new_user_registration_path, class: 'nav-link btn bg-blue text-white w-100 p-3' %>
     </li>
   </ul>
 <% end %>

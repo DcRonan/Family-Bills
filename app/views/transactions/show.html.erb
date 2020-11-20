@@ -2,7 +2,7 @@
   <div class="card m-auto col-11 text-start">
   <div class="card-body">
     <div class="d-flex align-items-center bold-font">
-    <%= image_tag 'stopwatch.png', alt: 'stopwatch', class: 'trans-img mr-2' %>
+    <%= image_tag 'payment.png', alt: 'payment', class: 'trans-img mr-2' %>
     <%= @transaction.name %>
   </div>
     <% if !@transaction.desc.empty? %>
@@ -26,3 +26,13 @@
   </div>
 </div>
 </div>
+
+<div class="fixed-bottom text-center d-flex row m-2 light-font">
+  <div class="col-6">
+    <%= button_to 'Edit', edit_transaction_path(@transaction), method: :get, class: 'btn bg-green p-2 text-white w-100' %>
+  </div>
+  <div class="col-6">
+    <%= button_to 'Back', transactions_path, method: :get, class: 'btn bg-danger p-2 w-100 text-white' %>
+  </div>
+</div>
+
