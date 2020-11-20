@@ -8,5 +8,4 @@ class ApplicationRecord < ActiveRecord::Base
   def time_created_at
     attributes['created_at'].strftime('%d %b %Y at %I:%M %P')
   end
-  
 end

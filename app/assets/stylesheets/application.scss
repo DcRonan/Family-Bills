@@ -1,40 +1,20 @@
 @import "bootstrap";
 @import "mixins";
-@import 'transactions';
-@import 'groups';
-@import 'font_and_colors';
-@import 'home';
-
-a:hover {
-  text-decoration: none;
-}
+@import "transactions";
+@import "groups";
+@import "font_and_colors";
+@import "home";
 
 body {
   height: 100vh;
 }
 
-.bg-blue {
-  background-color: #3778c2;
-}
-
-.text-blue {
-  color: #3778c2;
+a:hover {
+  text-decoration: none;
 }
 
 .trans-icons {
   font-size: 18px;
-}
-
-.bg-green {
-  background-color: #5fb523;
-}
-
-.text-green {
-  color: #5fb523;
-}
-
-.text-dark {
-  color: #434b54;
 }
 
 .notification:not(:last-child) {
@@ -43,17 +23,6 @@ body {
 
 .main-navbar {
   z-index: 800;
-}
-
-.blue-background {
-  background: linear-gradient(17deg, rgba(51,105,167,0.8229317851959361) 0%, rgba(55,120,194,1) 65%);
-  height: 100vh;
-}
-
-#main-page img {
-  width: 80px;
-  height: 80px;
-  margin: auto;
 }
 
 .group-img img {
@@ -66,7 +35,14 @@ body {
   width: 3em;
 }
 
+#main-page img {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+}
+
 .card {
+  background: #fff;
   box-shadow:
     3px 3px rgba(200, 200, 200, 0.2),
     3px -3px rgba(200, 200, 200, 0.2),
@@ -75,8 +51,7 @@ body {
 }
 
 .total-box {
-  box-shadow:
-    5px 5px rgba(200, 200, 200, 0.2),
+  box-shadow: 5px 5px rgba(200, 200, 200, 0.2);
 }
 
 .justify-content-evenly {
@@ -85,12 +60,12 @@ body {
 
 .sessions {
   @include flexCenter(center, column);
-  
+
   position: absolute;
   margin: auto;
   top: 50%;
   left: 50%;
   -ms-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translate(-50%,-50%);
-  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
