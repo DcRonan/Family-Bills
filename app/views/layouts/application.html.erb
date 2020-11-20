@@ -44,9 +44,11 @@
           <% elsif current_page?(groups_path) %>
             <h3 class="font-weight-light mt-2"> GROUPS </h3>
           <% elsif current_page?(new_transaction_path) %>
-            <h3 class="font-weight-light mt-2"> NEW </h3>
+            <h3 class="font-weight-light mt-2"> NEW BILL </h3>
           <% elsif current_page?(edit_user_registration_path) %>
-            <h3 class="font-weight-light mt-2"> EDIT USER </h3>  
+            <h3 class="font-weight-light mt-2"> EDIT USER </h3>
+          <% elsif current_page?(new_group_path) %>
+            <h3 class="font-weight-light mt-2"> NEW GROUP </h3>   
           <% end %>
         </ul>
         <ul class="nav nav-img">
