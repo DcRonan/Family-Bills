@@ -5,9 +5,11 @@
     <%= image_tag 'stopwatch.png', alt: 'stopwatch', class: 'trans-img mr-2' %>
     <%= @transaction.name %>
   </div>
-    <p class="card-text mt-3">
+    <% if !@transaction.desc.empty? %>
+     <p class="card-text mt-3">
       <%= @transaction.desc %>
     </p>
+    <% end %>
   </div>
   <ul class="list-group list-group-flush">
     <li class="list-group-item text-muted">
