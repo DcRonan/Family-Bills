@@ -1,0 +1,25 @@
+@font-face {
+  font-family: ProximaNova;
+  src: url('../fonts/Proxima-Nova-Bold.otf') format('opentype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: ProximaNova;
+  src: 
+    local('ProximaNova'),
+    url('../fonts/Proxima-Nova-Light.otf')
+    format('opentype');
+  font-style: lighter;  
+}
+
+.light-font {
+  font-family: ProximaNova, 'sans-serif';
+  font-weight: lighter;
+}
+
+.bold-font {
+  font-family: ProximaNova, 'sans-serif';
+  font-weight: lighter;
+}
+
