@@ -1,6 +1,6 @@
 <div class="text-white light-font mt-3 group-index">
   <% @groups.each do |group| %>
-    <div class="d-flex">
+    <div class="d-flex animate__animated animate__bounceIn">
       <div class="group-img mr-2 mb-3">
         <% if group.avatar.attached? %>
           <%= image_tag group.avatar %>

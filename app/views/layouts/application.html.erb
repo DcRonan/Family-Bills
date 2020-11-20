@@ -8,6 +8,7 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://kit.fontawesome.com/867f1dd431.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   </head>
   <body class="container-fluid <%= 'blue-background' if current_page?(groups_path) || current_page?(home_index_path) || current_page?(root_path) && user_signed_in? %> <%= 'group-background' if current_page?(groups_path) %> <%= 'home-background' if current_page?(home_index_path) %>">
     <div class="row">
