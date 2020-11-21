@@ -36,6 +36,10 @@ In this app that I have created, you have the ability to track all your bills as
 
 ![img](./app/assets/svg/ruby.svg) ![img](./app/assets/svg/rails.svg) ![img](./app/assets/svg/amazon-s3.svg) ![img](./app/assets/svg/postgresql.svg) ![img](./app/assets/svg/heroku.svg) ![img](./app/assets/svg/bootstrap-4.svg)  ![img](./app/assets/svg/v-s-code.svg) ![img](./app/assets/svg/rubygems.svg)
 
+## Live Demo
+
+<a href="https://aqueous-tundra-34999.herokuapp.com/"><img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy"></a>
+
 ## Features 🎥
 
 1. `User accounts` - `Sign up` - `Log in` - `Edit account` - `Delete account`
