@@ -1,7 +1,10 @@
 <%= render 'edit_form', group: @group %>
 
 <div class="fixed-bottom text-center d-flex row m-2 light-font">
-  <div class="col-12">
-    <%= button_to 'Back', groups_path, method: :get, class: 'btn bg-danger p-2 w-100 text-white' %>
+  <div class="col-6">
+    <%= button_to 'Back', groups_path, method: :get, class: 'btn bg-green p-2 w-100 text-white' %>
+  </div>
+  <div class="col-6">
+    <%= button_to 'Delete', group_path, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn bg-danger p-2 w-100 text-white' %>
   </div>
 </div>

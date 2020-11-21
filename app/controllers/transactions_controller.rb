@@ -55,7 +55,7 @@ class TransactionsController < ApplicationController
   def external_transactions
     @all_transactions = current_user.transactions.all.recent
     @e_transactions = current_user.external_transaction(@all_transactions)
-    @e_total = Transaction.select { |t| t.group_id.nil? }
+    @e_total = Transaction.where(group_id: nil)
     @ex_total = @e_total.pluck(:amount).inject(0) { |sum, x| sum + x }
   end
 
