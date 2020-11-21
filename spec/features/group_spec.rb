@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Groups", type: :feature do
+RSpec.feature 'Groups', type: :feature do
   it 'checks content when a group is created' do
     visit '/users/sign_up'
     fill_in :user_name, with: 'Daniel Ronan'

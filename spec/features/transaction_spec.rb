@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.feature "Transactions", type: :feature do
+RSpec.feature 'Transactions', type: :feature do
   it 'checks content when a transaction is created' do
     visit '/users/sign_up'
     fill_in :user_name, with: 'Daniel Ronan'
