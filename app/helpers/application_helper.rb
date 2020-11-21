@@ -1,3 +1,5 @@
+# rubocop:disable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity
+
 module ApplicationHelper
   def which_page
     if current_page?(transactions_path)
@@ -26,3 +28,5 @@ module ApplicationHelper
     end
   end
 end
+
+# rubocop:enable Metrics/PerceivedComplexity, Metrics/CyclomaticComplexity
