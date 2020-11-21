@@ -40,10 +40,6 @@ In this app that I have created, you have the ability to track all your bills as
 
 <a href="https://aqueous-tundra-34999.herokuapp.com/"><img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy"></a>
 
-## Presentation Video
-
-[Loom Video](https://www.loom.com/share/332ccaaaa9e54a97a6b74bce78172eaf)
-
 ## Features 🎥
 
 1. `User accounts` - `Sign up` - `Log in` - `Edit account` - `Delete account`
