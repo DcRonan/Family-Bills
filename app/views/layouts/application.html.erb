@@ -4,12 +4,47 @@
     <title>BillTracker</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/867f1dd431.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   </head>
-
-  <body>
+  <body class="container-fluid <%= 'blue-background' if current_page?(groups_path) || current_page?(home_index_path) || current_page?(root_path) && user_signed_in? %>">
+    <div class="row">
+      <% if flash[:notice] %>
+        <div class="bg-success col-12 text-center p-2">
+          <p class="notice text-white m-auto"> <%= notice %> </p>
+        </div>
+      <% end %>
+      <% if flash[:alert] %>
+        <div class="bg-danger col-12 text-center p-2">
+          <p class="alert text-white m-auto"> <%= alert %> </p>
+        </div>
+      <% end %>
+    </div>
+    <div class="row">
+      <nav class="bg-blue navbar col-12 main-navbar <%= 'd-none' if !user_signed_in? %>">
+        <ul class="nav <%= 'd-none' if current_page?(home_index_path) %>">
+          <%= link_to home_index_path, class: "nav-item" do %>
+            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="2em" height="2em" viewBox="0 0 124 124" fill="#fff" style="enable-background:new 0 0 124 124;" xml:space="preserve">
+              <g>
+                <path d="M112,6H12C5.4,6,0,11.4,0,18s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,6,112,6z"/>
+                <path d="M112,50H12C5.4,50,0,55.4,0,62c0,6.6,5.4,12,12,12h100c6.6,0,12-5.4,12-12C124,55.4,118.6,50,112,50z"/>
+                <path d="M112,94H12c-6.6,0-12,5.4-12,12s5.4,12,12,12h100c6.6,0,12-5.4,12-12S118.6,94,112,94z"/>
+              </g>
+            </svg>
+          <% end %>
+        </ul>
+        <ul class="nav text-white justify-content-center bold-font">
+          <%= which_page %>
+        </ul>
+        <ul class="nav nav-img light-font">
+          <%= nav_display %>
+        </ul>
+      </nav>
+    </div>
     <%= yield %>
   </body>
 </html>

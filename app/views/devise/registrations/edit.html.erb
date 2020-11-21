@@ -1,0 +1,42 @@
+<div class="row mt-4 light-font text-dark">
+  <div class="col-12 m-auto">
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+      <%= f.error_notification %>
+      <div class="form-group">
+        <%= f.input :name, required: true, input_html: { class:"form-control" }, wrapper: false, label: false %>
+      </div>
+      <div class="form-group">
+        <%= f.input :email, required: true, input_html: { class:"form-control" }, wrapper: false, label: false %>
+      </div>
+      <div class="form-group">
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+        <% end %>
+      </div>
+      <div class="form-group">
+        <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", input_html: { class:"form-control" }, required: false, wrapper: false, label: false, placeholder: 'password' %>
+      </div>
+      <div class="form-group">
+        <%= f.input :password_confirmation, required: false, input_html: { class: "form-control"}, wrapper: false, label: false, placeholder: 'password confirmation' %>
+      </div>
+      <div class="form-group">
+        <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true, input_html: { class: "form-control"}, wrapper: false, label: false, placeholder: 'current password' %>
+      </div>
+      <div class="form-group">
+        <%= f.file_field :avatar, required: false %>
+      </div>
+      <div class="form-group">
+        <%= f.button :submit, "Confirm", class:"btn bg-blue text-white w-100" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="fixed-bottom text-center d-flex row m-2 light-font">
+  <div class="col-6">
+    <%= button_to 'Back', home_index_path, method: :get, class: 'btn bg-green p-2 w-100 text-white' %>
+  </div>
+  <div class="col-6">
+    <%= button_to 'Delete', registration_path(resource_name), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn bg-danger p-2 text-white w-100' %>
+  </div>
+</div>

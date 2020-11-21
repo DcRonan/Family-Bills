@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+@font-face {
+  font-family: "proxima_novalight";
+  src:
+    url("proxima_nova_light-webfont.woff2") format("woff2"),
+    url("proxima_nova_light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "proxima_novabold";
+  src:
+    url("proxima_nova_bold-webfont.woff2") format("woff2"),
+    url("proxima_nova_bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.bold-font {
+  font-family: "proxima_novabold", Arial, sans-serif;
+}
+
+.light-font {
+  font-family: "proxima_novalight", Arial, sans-serif;
+}
+
+.home-title {
+  font-family: 'Dancing Script', cursive;
+}
+
+.bg-blue {
+  background-color: #3778c2;
+}
+
+.text-blue {
+  color: #3778c2;
+}
+
+.bg-green {
+  background-color: #5fb523;
+}
+
+.text-green {
+  color: #5fb523;
+}
+
+.text-dark {
+  color: #434b54;
+}
+
+.blue-background {
+  background: linear-gradient(17deg, rgba(51, 105, 167, 0.8229317851959361) 0%, rgba(55, 120, 194, 1) 65%);
+  height: 100vh;
+}

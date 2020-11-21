@@ -1,0 +1,71 @@
+@import "bootstrap";
+@import "mixins";
+@import "transactions";
+@import "groups";
+@import "font_and_colors";
+@import "home";
+
+body {
+  height: 100vh;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.trans-icons {
+  font-size: 18px;
+}
+
+.notification:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.main-navbar {
+  z-index: 800;
+}
+
+.group-img img {
+  height: 60px;
+  width: 60px;
+}
+
+.nav img {
+  height: 3em;
+  width: 3em;
+}
+
+#main-page img {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+}
+
+.card {
+  background: #fff;
+  box-shadow:
+    3px 3px rgba(200, 200, 200, 0.2),
+    3px -3px rgba(200, 200, 200, 0.2),
+    -3px -3px rgba(200, 200, 200, 0.2),
+    -3px 3px rgba(200, 200, 200, 0.2);
+}
+
+.total-box {
+  box-shadow: 5px 5px rgba(200, 200, 200, 0.2);
+}
+
+.justify-content-evenly {
+  justify-content: space-evenly;
+}
+
+.sessions {
+  @include flexCenter(center, column);
+
+  position: absolute;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}

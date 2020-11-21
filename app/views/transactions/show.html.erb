@@ -1,0 +1,36 @@
+<div class="row mt-4 light-font text-dark">
+  <div class="card m-auto col-11 text-start">
+  <div class="card-body">
+    <div class="d-flex align-items-center bold-font">
+    <%= image_tag 'payment.png', alt: 'payment', class: 'trans-img mr-2' %>
+    <%= @transaction.name %>
+  </div>
+     <p class="card-text mt-3">
+      <%= @transaction.desc %>
+    </p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item text-muted">
+     <i class="far fa-calendar mr-1"></i> <%= @transaction.time_created_at %>
+    </li>
+  </ul>
+  <div class="card-body d-flex justify-content-between">
+    <div>
+      TOTAL PAYMENT
+    </div>
+    <div class="bold-font">
+      £<%= @transaction.amount %>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="fixed-bottom text-center d-flex row m-2 light-font">
+  <div class="col-6">
+    <%= button_to 'Edit', edit_transaction_path(@transaction), method: :get, class: 'btn bg-green p-2 text-white w-100' %>
+  </div>
+  <div class="col-6">
+    <%= button_to 'Back', transactions_path, method: :get, class: 'btn bg-danger p-2 w-100 text-white' %>
+  </div>
+</div>
+
