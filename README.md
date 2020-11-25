@@ -38,7 +38,7 @@ In this app that I have created, you have the ability to track all your bills as
 
 ## Live Demo
 
-<a href="https://aqueous-tundra-34999.herokuapp.com/"><img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy"></a>
+<a href="https://family--bills.herokuapp.com/"><img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy"></a>
 
 ## Features 🎥
 
