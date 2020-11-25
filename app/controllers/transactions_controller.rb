@@ -4,7 +4,7 @@ class TransactionsController < ApplicationController
 
   def index
     @transactions = current_user.transactions.all.recent
-    @total = Transaction.pluck(:amount).inject(0) { |sum, x| sum + x }
+    @total = current_user.transactions.pluck(:amount).inject(0) { |sum, x| sum + x }
   end
 
   def show
@@ -56,7 +56,7 @@ class TransactionsController < ApplicationController
     @all_transactions = current_user.transactions.all.recent
     @e_transactions = current_user.external_transaction(@all_transactions)
     @e_total = Transaction.where(group_id: nil)
-    @ex_total = @e_total.pluck(:amount).inject(0) { |sum, x| sum + x }
+    @ex_total = @e_total.current_user.pluck(:amount).inject(0) { |sum, x| sum + x }
   end
 
   private
