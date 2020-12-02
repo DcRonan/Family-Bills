@@ -14,7 +14,7 @@
 | [License](#license) | 
 
 ## Description
-> This is my final project for completing the `Ruby on Rails` module. In doing so, I have created mobile web-application called `Family Bills`.
+> This is my final project for completing the `Ruby on Rails` module. In doing so, I have created a mobile web-application called `Family Bills`.
 
 ![img](./app/assets/images/main-sc.png) ![img](./app/assets/images/main-sc-1.png)
 
