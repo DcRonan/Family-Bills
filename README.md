@@ -19,7 +19,7 @@
 ![img](./app/assets/images/main-sc.png) ![img](./app/assets/images/main-sc-1.png)
 
 
-In this app that I have created, you have the ability to track all your bills as a family (or just yourself). The design of the app is provided by [Gregoire Vella](https://www.behance.net/gregoirevella) and you can look at the design [here](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=). <br> <br> All the features are displayed [here](#features).
+In this app that I have created, you can track all your bills as a family (or just yourself). The design of the app is provided by [Gregoire Vella](https://www.behance.net/gregoirevella) and you can look at the design [here](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=). <br> <br> All the features are displayed [here](#features).
 
 ## Built With 🛠
 ```
@@ -62,7 +62,7 @@ In this app that I have created, you have the ability to track all your bills as
 1. - [ ] Open your `Terminal`
 2. - [ ] Navigate to the directory where you will like to install the repo by running `cd FOLDER-NAME`
 3. - [ ] Run `git clone git@github.com:DcRonan/Family-Bills.git` to download <b>or</b> you can download using `HTTPS` by running `git clone https://github.com/DcRonan/Family-Bills.git` in the terminal
-4. - [ ] Run `cd Family-Bills` to enter directory
+4. - [ ] Run `cd Family-Bills` to enter the directory
 5. - [ ] Run `bundle install` to install Ruby Gems (<b>hint:</b> Mac users, if not working then run `sudo bundle install`)
 6. - [ ] Run `rails db:create` to create a local database
 7. - [ ] Run `rails db:migrate` to migrate the database
@@ -73,7 +73,7 @@ In this app that I have created, you have the ability to track all your bills as
 > I have used [rspec](https://rspec.info/) testing tool to test the code by creating many test cases. Please follow below to test my code
 
 1. - [ ] Open `Terminal` again
-2. - [ ] Run `cd Family-Bills` to enter directory
+2. - [ ] Run `cd Family-Bills` to enter the directory
 3. - [ ] Run `rspec` to start testing
 4. - [ ] All tests will pass ✅
 
@@ -87,7 +87,7 @@ In this app that I have created, you have the ability to track all your bills as
 [![EMAIL](https://img.shields.io/badge/-EMAIL-D14836?style=for-the-badge&logo=Mail.Ru&logoColor=white)](mailto:danielconnorronan@gmail.com) <br>
 [![TWITTER](https://img.shields.io/badge/-TWITTER-1DA1F2?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/dc_ronan)
 
-### Acknowledgments 🌟
+### Acknowledgements 🌟
 
 Design by [Gregoire Vella](https://www.behance.net/gregoirevella) <br> <br>
 You can look at the design [here](https://www.behance.net/gallery/19759151/Snapscan-iOs-design-and-branding?tracking_source=)
