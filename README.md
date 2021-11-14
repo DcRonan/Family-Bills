@@ -38,7 +38,7 @@ In this app that I have created, you can track all your bills as a family (or ju
 
 ## Live Demo
 
-<a href="https://family--bills.herokuapp.com/"><img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy"></a>
+<a href="https://family--bills.herokuapp.com/">Click here</a>
 
 ## Features 🎥
 
